@@ -17,7 +17,8 @@ console.log(declare*numerology);
 
 console.log(2+true);
 
-// When we're using a boolean as a number, false is 0 and 1 is true
+// When we're using a boolean as a number, false is 0 and true is 1
+// Small update, when evaluating numbers as a boolean, 0 is false, but literally any other number is true.  I think?  I should ask about that.  And also read the page again.  And find the page I read before my dog ran over my laptop.
 
 // Day 2
 
