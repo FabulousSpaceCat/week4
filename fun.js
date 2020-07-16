@@ -1,0 +1,89 @@
+// Create a new function that takes two arguments and adds them together
+
+function addNums(one, two) {
+    let result = one + two;
+    console.log("We\'re adding numbers today!" + " " + one + " " + "plus" + " " + two + " " + "equals" + " " + result)
+}
+
+addNums(4,5);
+
+// So ending my console log with just one + two gave me string concatenation instead of math.  That was interesting.  I mean I could have just console logged the math and not made it fancy and that worked, obviously, since result's value works.
+
+// Now basically the same thing but with multiplication, and returning the result outside the scope of the function.
+
+function multiplyNums(one, two) {
+    let answer = one * two;
+    return answer
+}
+
+let answer = multiplyNums(6,7);
+console.log(answer)
+
+// Didn't feel like making a fancy sentence.
+
+// Okay let's do the counting loop.  You did it with a for loop and I could do it the easy way and copy it, but clearly I don't do that.
+
+function counting(start,end) {
+    if (start < end) {
+        console.log("I'm sorry Dave, I'm afraid I can't do that.")
+    }
+    else {
+        while (start >= end) {
+            console.log(start)
+            start--
+        }
+    }
+    if (start = end) {
+        console.log("Ding!")
+    }
+}
+
+counting(10,1)
+
+//Interesting note, if I set end to 0 then it doesn't ding.
+
+let noise = "meow"
+
+function timeToEat (numberOfCats, hungerScale) {
+    let volume = 0
+    if(numberOfCats <= volume) {
+        console.log("Why are you here? You don't have any cats!")
+    }
+    else {
+        while (numberOfCats > volume) {
+            noise = `${noise} meow`
+            volume++
+        }
+    }
+    if (hungerScale === 0) {
+        console.log("It's not time to eat yet.  You only hear " + noise + ".")
+    }
+    else {
+        while (hungerScale > 1) {
+            noise = `${noise} ${noise}`
+            hungerScale--
+        }
+    }
+    if (hungerScale === 1) {
+        console.log("You hear " + noise + ". You should feed them before they eat you.")
+    }
+}
+
+timeToEat(10,5);
+
+// Okay that was fun but back to the homework.  Here is a global variable, with a function that returns an argument added to it.
+
+let whargarbl = 5
+
+function wubbawubba(arg1) {
+    whargarbl = whargarbl + arg1;
+    return whargarbl;
+}
+
+console.log(wubbawubba(10));
+
+// Finally, an IIFE
+
+(function() {
+    alert("Look at me, I'm an IIFE!");
+})();
