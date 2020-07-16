@@ -82,7 +82,7 @@ function wubbawubba(arg1) {
 
 console.log(wubbawubba(10));
 
-// Finally, an IIFE
+// Finally, an IIFE.  The semicolon on the console log right above trolled me when I forgot it, I was getting "console log is not a function" and that is NOT a useful error because I was trying to console log in my IIFE.  Now, when I changed to an alert and the message didn't change, I knew I should be looking elsewhere. >_>
 
 (function() {
     alert("Look at me, I'm an IIFE!");
