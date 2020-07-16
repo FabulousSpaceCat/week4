@@ -42,12 +42,26 @@ counting(10,1)
 
 //Interesting note, if I set end to 0 then it doesn't ding.
 
-let noise = "meow"
+let noise = ""
+let cats = window.prompt("How many cats do you have?")
+let hungry = confirm("Is it time to eat?\nPress OK for yes, Cancel for no.");
+let hunger;
+
+function areTheyHungry() {
+    if (hungry == true) {
+        hunger = window.prompt("On a scale of 1 to 10, how hungry are they?", "")
+        return hunger
+    }
+    else {
+        hunger = 0
+        return hunger
+    }
+}
 
 function timeToEat (numberOfCats, hungerScale) {
     let volume = 0
     if(numberOfCats <= volume) {
-        console.log("Why are you here? You don't have any cats!")
+        document.write("Why are you here? You don't have any cats!")
     }
     else {
         while (numberOfCats > volume) {
@@ -56,20 +70,25 @@ function timeToEat (numberOfCats, hungerScale) {
         }
     }
     if (hungerScale === 0) {
-        console.log("It's not time to eat yet.  You only hear " + noise + ".")
+        document.write("It's not time to eat yet.  You only hear " + noise + ".")
     }
     else {
-        while (hungerScale > 1) {
+        while (hungerScale > 1 && hungerScale <= 10) {
             noise = `${noise} ${noise}`
             hungerScale--
         }
     }
     if (hungerScale === 1) {
-        console.log("You hear " + noise + ". You should feed them before they eat you.")
+        document.write("You hear " + noise + ". You should feed them before they eat you.")
+    }
+    if (hungerScale > 10) {
+        document.write("Oh come on, they can't be that hungry.")
     }
 }
 
-timeToEat(10,5);
+areTheyHungry()
+timeToEat(cats,hunger);
+
 
 // Okay that was fun but back to the homework.  Here is a global variable, with a function that returns an argument added to it.
 
