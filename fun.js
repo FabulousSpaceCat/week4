@@ -43,9 +43,19 @@ counting(10,1)
 //Interesting note, if I set end to 0 then it doesn't ding.
 
 let noise = ""
-let cats = window.prompt("How many cats do you have?")
-let hungry = confirm("Is it time to eat?\nPress OK for yes, Cancel for no.");
+let cats = window.prompt("How many cats do you have?");
+let hungry;
 let hunger;
+
+function enoughCats() {
+    if (cats > 0) {
+        hungry = confirm("Is it time to eat?\nPress OK for yes, Cancel for no.");
+        return hungry
+    }
+    else {
+        document.write("Why are you here?  You don't have any cats.")
+    }
+}
 
 function areTheyHungry() {
     if (hungry == true) {
@@ -60,16 +70,13 @@ function areTheyHungry() {
 
 function timeToEat (numberOfCats, hungerScale) {
     let volume = 0
-    if(numberOfCats <= volume) {
-        document.write("Why are you here? You don't have any cats!")
-    }
-    else {
+    if(numberOfCats > volume) {
         while (numberOfCats > volume) {
             noise = `${noise} meow`
             volume++
         }
     }
-    if (hungerScale === 0) {
+    if (hungry === false && numberOfCats > 0) {
         document.write("It's not time to eat yet.  You only hear " + noise + ".")
     }
     else {
@@ -86,6 +93,7 @@ function timeToEat (numberOfCats, hungerScale) {
     }
 }
 
+enoughCats()
 areTheyHungry()
 timeToEat(cats,hunger);
 
