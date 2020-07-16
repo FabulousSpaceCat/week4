@@ -42,7 +42,6 @@ counting(10,1)
 
 //Interesting note, if I set end to 0 then it doesn't ding.
 
-let noise = ""
 let cats = window.prompt("How many cats do you have?");
 let hungry;
 let hunger;
@@ -70,6 +69,7 @@ function areTheyHungry() {
 
 function timeToEat (numberOfCats, hungerScale) {
     let volume = 0
+    let noise = ""
     if(numberOfCats > volume) {
         while (numberOfCats > volume) {
             noise = `${noise} meow`
