@@ -1,3 +1,69 @@
-#songlist span {
-    padding-left:10px;
+body {
+    background-color:#4d004d;
+    color:palegoldenrod;
+    text-align:center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+footer {
+    position:absolute;
+    bottom:1rem;
+    left: 0;
+    right: 0;
+    margin:auto;
+}
+
+/* I know this isn't the right way to do that, I'm tired and will fix it later */
+
+#container {
+    width:90%;
+    max-width:50vw;
+    margin:1vw auto;
+}
+#container h1 {
+    padding:1rem;
+}
+#request {
+    border:none;
+    padding:0.3rem 0.5rem 0.3rem 0.5rem;
+    border-radius: 0.3rem;
+    background-color:lightyellow;
+    color:darkmagenta;
+}
+#songRequest button {
+    border:none;
+    background-color:palegoldenrod;
+    color:darkmagenta;
+    padding:0.3rem 0.75rem 0.3rem 0.75rem;
+    box-shadow:0 2px 5px rgba(255,255,255,0.4);
+    border-radius: 0.3rem;
+    font-weight: bold;
+}
+#songList ul {
+    padding:0;
+}
+#songList li{
+    background-color:palegoldenrod;
+    color:darkmagenta;
+    margin:1rem 0;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(255,255,255,0.4);
+    padding:1rem 3rem 1rem 1.5rem;
+    min-height:2rem;
+    line-height:1rem;
+    font-size:1.5rem;
+    font-weight:bold;
+    position:relative;
+    display:flex;
+    align-items: center;
+}
+#songList li:hover, #songRequest button:hover {
+    background-color:lightyellow;
+    color:magenta;
+}
+#songList span {
+    position:absolute;
+    right:1.5rem;
 }
