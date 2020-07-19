@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="tunes.css">
+    <title>We got the tunes, man!</title>
+</head>
+<body>
+<div id="container">
+<header>
+    <h1>Now playing on WXYZ: The Variable Radio</h1>
+</header>
+<main>
+    <div id="songRequest">
+        <label for="request">Request a song!</label>
+        <input type="text" id="request" name="request" autofocus></input>
+        <button onclick="songRequest()">Play!</button>
+    </div>
+    <div id="songList">
+        <ul>
+            <li>Nobody has requested any songs yet.<span></span></li>
+            <li>You should request a song!<span></span></li>
+            <li>What's your favorite?<span></span></li>
+        </ul>
+    </div>
+</main>
+<footer>
+    <p>The play button opens a Youtube search.  Nothing fancy.  When you click it, that list item is removed.</p>
+</footer>
+</div>
+    <script src="tunes.js"></script>
+</body>
+</html>

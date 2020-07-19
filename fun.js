@@ -61,7 +61,6 @@ function areTheyHungry() {
     }
     else {
         hunger = 0
-        return hunger
     }
 }
 
