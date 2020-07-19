@@ -4,19 +4,9 @@ body {
     text-align:center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-a {
-    text-decoration: none;
-}
 footer {
-    position:absolute;
-    bottom:1rem;
-    left: 0;
-    right: 0;
-    margin:auto;
+    font-size:0.75rem;
 }
-
-/* I know this isn't the right way to do that, I'm tired and will fix it later */
-
 #container {
     width:90%;
     max-width:50vw;
@@ -41,16 +31,15 @@ footer {
     border-radius: 0.3rem;
     font-weight: bold;
 }
-#songList ul {
+#theTunes {
     padding:0;
 }
-#songList li{
+#theTunes li{
     background-color:palegoldenrod;
     color:darkmagenta;
     margin:1rem 0;
     border-radius:10px;
     box-shadow:0 2px 5px rgba(255,255,255,0.4);
-    padding:1rem 3rem 1rem 1.5rem;
     min-height:2rem;
     line-height:1rem;
     font-size:1.5rem;
@@ -58,8 +47,19 @@ footer {
     position:relative;
     display:flex;
     align-items: center;
+    text-align: left;
 }
-#songList li:hover, #songRequest button:hover {
+#theTunes li a {
+    text-decoration: none;
+    color:darkmagenta;
+    display:inline-block;
+    width:100%;
+    padding:1.5rem 3.5rem 1.5rem 2rem;
+}
+#theTunes li a:hover {
+    color:magenta;
+}
+#theTunes li:hover, #songRequest button:hover {
     background-color:lightyellow;
     color:magenta;
 }

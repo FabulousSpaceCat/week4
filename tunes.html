@@ -9,7 +9,11 @@
 <body>
 <div id="container">
 <header>
-    <h1>Now playing on WXYZ: The Variable Radio</h1>
+    <h1>
+        Now playing on
+        <br>
+        WXYZ: The Variable Radio
+    </h1>
 </header>
 <main>
     <div id="songRequest">
@@ -18,10 +22,10 @@
         <button onclick="songRequest()">Play!</button>
     </div>
     <div id="songList">
-        <ul>
-            <li>Nobody has requested any songs yet.<span></span></li>
-            <li>You should request a song!<span></span></li>
-            <li>What's your favorite?<span></span></li>
+        <ul id="theTunes">
+            <li><a href="#">Nobody has requested any songs yet.</a></li>
+            <li><a href="#">You should request a song!</a></li>
+            <li><a href="#">What's your favorite?</a></li>
         </ul>
     </div>
 </main>
