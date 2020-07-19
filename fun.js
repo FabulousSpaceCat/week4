@@ -49,7 +49,6 @@ let hunger;
 function enoughCats() {
     if (cats > 0) {
         hungry = confirm("Is it time to eat?\nPress OK for yes, Cancel for no.");
-        return hungry
     }
     else {
         document.write("Why are you here?  You don't have any cats.")
@@ -59,7 +58,6 @@ function enoughCats() {
 function areTheyHungry() {
     if (hungry == true) {
         hunger = window.prompt("On a scale of 1 to 10, how hungry are they?", "")
-        return hunger
     }
     else {
         hunger = 0
@@ -104,7 +102,6 @@ let whargarbl = 5
 
 function wubbawubba(arg1) {
     whargarbl = whargarbl + arg1;
-    return whargarbl;
 }
 
 console.log(wubbawubba(10));
