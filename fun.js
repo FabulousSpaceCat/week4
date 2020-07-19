@@ -101,7 +101,6 @@ let whargarbl = 5
 
 function wubbawubba(arg1) {
     whargarbl = whargarbl + arg1;
-    return whargarbl;
 }
 
 console.log(wubbawubba(10));
