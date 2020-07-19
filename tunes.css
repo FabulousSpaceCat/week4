@@ -17,53 +17,58 @@ footer {
 }
 #request {
     border:none;
-    padding:0.3rem 0.5rem 0.3rem 0.5rem;
-    border-radius: 0.3rem;
+    padding:1rem 3.5rem 1rem 2rem;
+    border-radius:10px 0px 0px 10px;
     background-color:lightyellow;
-    color:darkmagenta;
+    width:100%;
+}
+#songRequest {
+    display:flex;
 }
 #songRequest button {
     border:none;
     background-color:palegoldenrod;
-    color:darkmagenta;
-    padding:0.3rem 0.75rem 0.3rem 0.75rem;
-    box-shadow:0 2px 5px rgba(255,255,255,0.4);
-    border-radius: 0.3rem;
-    font-weight: bold;
+    padding:1.5rem 1.5rem;
+    border-radius:0px 10px 10px 0px;
+}
+#songRequest label {
+    visibility:hidden;
+    position:absolute;
+    left:-2000px;
 }
 #theTunes {
     padding:0;
 }
 #theTunes li{
     background-color:palegoldenrod;
-    color:darkmagenta;
     margin:1rem 0;
     border-radius:10px;
-    box-shadow:0 2px 5px rgba(255,255,255,0.4);
-    min-height:2rem;
-    line-height:1rem;
-    font-size:1.5rem;
-    font-weight:bold;
     position:relative;
     display:flex;
-    align-items: center;
-    text-align: left;
+    align-items:center;
+    text-align:left;
 }
 #theTunes li a {
     text-decoration: none;
     color:darkmagenta;
-    display:inline-block;
     width:100%;
     padding:1.5rem 3.5rem 1.5rem 2rem;
 }
-#theTunes li a:hover {
+#theTunes li a:hover, #theTunes li:hover, #songRequest button:hover  {
     color:magenta;
 }
 #theTunes li:hover, #songRequest button:hover {
     background-color:lightyellow;
-    color:magenta;
 }
 #songList span {
     position:absolute;
     right:1.5rem;
+}
+.looks {
+    box-shadow:0 2px 5px rgba(255,255,255,0.4);
+    color:darkmagenta;
+    min-height:2rem;
+    line-height:1rem;
+    font-size:1.5rem;
+    font-weight:bold;
 }
