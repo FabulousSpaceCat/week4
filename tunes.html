@@ -10,7 +10,7 @@
 <div id="container">
 <header>
     <h1>
-        Now playing on
+        <span>Now playing on</span>
         <br>
         WXYZ: The Variable Radio
     </h1>
@@ -18,7 +18,7 @@
 <main>
     <div id="songRequest">
         <label for="request">Request a song!</label>
-        <input type="text" id="request" name="request" class="looks" placeholder="What would you like to listen to?" autofocus></input>
+        <input type="text" id="request" name="request" class="looks" placeholder="What would you like to listen to?" onkeypress="pressEnter()" autofocus></input>
         <button class="looks" onclick="songRequest()">&#9658;</button>
     </div>
     <div id="songList">

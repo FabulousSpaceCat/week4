@@ -33,6 +33,12 @@ function songPlayed(id) {
     songs.forEach(listGen2);   
 }
 
+function pressEnter() {
+    if (event.keyCode == 13) {
+        songRequest();
+    }
+}
+
 /**
  * Check into how this works, from Lothus: https://developer.mozilla.org/en-US/docs/web/javascript/reference/global_objects/array/indexof
  * It will avoid rebuilding the ul every time, and maybe give me the ability to style the removal of the element with an animation or something.
