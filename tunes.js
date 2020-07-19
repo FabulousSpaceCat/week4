@@ -10,16 +10,22 @@ function listGen() {
     document.getElementById("songList").innerHTML = text;
 }
 
+function listGen2(item,index) {
+    document.getElementById("theTunes").innerHTML += "<li id=\"" + index + "\"><a onclick=\"songPlayed(this)\" href=\"https://www.youtube.com/results?search_query=" + item + "\" target=\"_blank\">" + item + "<span>&#9658;</span></li></a>";
+}
+
 function songRequest() {
     songs.push(document.getElementById("request").value);
-    listGen();
+    document.getElementById("theTunes").innerHTML = "";
+    songs.forEach(listGen2);
     document.getElementById("request").value = "";
 }
 
 function songPlayed(id) {
-    let i = id.parentNode.parentNode.id;
+    let i = id.parentNode.id;
     songs.splice(i,1);
-    listGen();    
+    document.getElementById("theTunes").innerHTML = "";
+    songs.forEach(listGen2);   
 }
 
 /**
@@ -27,7 +33,7 @@ function songPlayed(id) {
  * It will avoid rebuilding the ul every time, and maybe give me the ability to style the removal of the element with an animation or something.
  * 
  * function songPlayed(id) {
- * var listItem = id.parentNode.parentNode;
+ * var listItem = id.parentNode;
  * var listRoot = listItem.parentNode;
  * var i = Array.prototype.indexOf.call(listRoot.children, listItem);
  * songs.splice(i,1);
